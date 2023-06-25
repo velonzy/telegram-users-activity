@@ -19,3 +19,4 @@ Please enter the code you received: 12345
 Signed in successfully as Username
 ```
 Next, a list of chats appears. To see the statistics of your channel, you must have comments enabled.
+Data will be saved at **/csv files** directory
