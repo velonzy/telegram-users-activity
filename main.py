@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from telethon.sync import TelegramClient
 from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty, MessageService
@@ -130,13 +132,13 @@ print("Parsing messages successfully completed")
 print("Saving data to files...")
 
 heapSort(list_of_users)
-with open("csv files/members.csv", "w", encoding="UTF-8") as f:
+with open("csv files/members.csv", "w", encoding="utf-8-sig") as f:
     writer = csv.writer(f, delimiter=",", lineterminator="\n")
     writer.writerow(["user_id", "username", "name", "num of comments", "num of reactions"])
     for user in list_of_users:
         writer.writerow(user.display_info())
 
-with open("csv files/messages_log.csv", "w", encoding="UTF-8") as f:
+with open("csv files/messages_log.csv", "w", encoding="utf-8-sig") as f:
     writer = csv.writer(f, delimiter=",", lineterminator="\n")
     for message in all_log_messages:
         writer.writerow([message])
